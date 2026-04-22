@@ -1,9 +1,8 @@
-# 👆 Part 1: Tap Gestures in SwiftUI
-### iOS Labs Contribution Series — SwiftUI Interactions
+# Part 1: Tap Gestures in SwiftUI
+### iOS Labs Contribution Series SwiftUI Interactions
 
 > **Series:** SwiftUI Interactions from Zero to Real-World  
 > **Part:** 1 of 3  
-> **Level:** Beginners + Intermediate  
 > **iOS Target:** iOS 17+ 
 
 ---
@@ -62,7 +61,7 @@ Both do the same thing. The `.onTapGesture` shorthand is cleaner for simple case
 
 ### 🔑 Key Concept: State Drives UI
 
-In SwiftUI, gestures almost always update `@State`. The state change then triggers a UI update. This is the core mental model — **never try to directly manipulate the UI. Change state, and let SwiftUI re-render.**
+In SwiftUI, gestures almost always update `@State`. The state change then triggers a UI update. This is the core mental model **never try to directly manipulate the UI. Change state, and let SwiftUI re-render.**
 
 ```swift
 @State private var isLiked = false
@@ -80,7 +79,7 @@ Image(systemName: isLiked ? "heart.fill" : "heart")
 
 ---
 
-### 1. `TapGesture` — Single & Double Tap
+### 1. `TapGesture` Single & Double Tap
 
 The most common gesture. You can detect single taps or configure it for double taps.
 
@@ -103,7 +102,7 @@ struct LikeButtonView: View {
 }
 ```
 
-**Double Tap — Tap twice to zoom (photo viewer style)**
+**Double Tap Tap twice to zoom (photo viewer style)**
 
 ```swift
 struct DoubleTapView: View {
@@ -122,7 +121,7 @@ struct DoubleTapView: View {
 }
 ```
 
-> 💡 **Tip:** When combining single and double tap on the same view, always attach double tap *first* — SwiftUI reads gestures top to bottom and the single tap will fire before the double tap gets a chance otherwise.
+> 💡 **Tip:** When combining single and double tap on the same view, always attach double tap *first* SwiftUI reads gestures top to bottom and the single tap will fire before the double tap gets a chance otherwise.
 
 ```swift
 .onTapGesture(count: 2) { /* double tap */ }
@@ -131,7 +130,7 @@ struct DoubleTapView: View {
 
 ---
 
-### 2. `LongPressGesture` — Hold to Trigger
+### 2. `LongPressGesture` Hold to Trigger
 
 Long press is perfect for context menus, force action confirmations, or "hold to record" mechanics.
 
@@ -154,7 +153,7 @@ struct LongPressView: View {
 }
 ```
 
-**Long Press with In-Progress Feedback**
+**Long Press with In Progress Feedback**
 
 Show the user *while* they're pressing not just after:
 
@@ -186,7 +185,7 @@ struct RecordButtonView: View {
 
 ---
 
-### 3. `DragGesture` — Swipe & Drag
+### 3. `DragGesture` Swipe & Drag
 
 Drag gestures give you real time position data as the user moves their finger.
 
@@ -229,7 +228,7 @@ struct DraggableCardView: View {
 
 ---
 
-### 4. `MagnifyGesture` — Pinch to Zoom
+### 4. `MagnifyGesture` Pinch to Zoom
 
 Used in photo viewers, maps, and any content you want users to zoom into.
 
@@ -261,9 +260,9 @@ struct PinchZoomView: View {
 
 ---
 
-### 5. `RotationGesture` — Twist & Rotate
+### 5. `RotationGesture` Twist & Rotate
 
-Rotate any view using two fingers — great for sticker editors, image tools, or creative apps.
+Rotate any view using two fingers great for sticker editors, image tools, or creative apps.
 
 ```swift
 struct RotatableEmojiView: View {
@@ -287,7 +286,7 @@ struct RotatableEmojiView: View {
 
 ---
 
-### 6. Combining Gestures — Two Gestures at Once
+### 6. Combining Gestures Two Gestures at Once
 
 SwiftUI lets you compose gestures in three ways:
 
@@ -367,7 +366,7 @@ ParentView()
 
 ### ✅ Add Feedback with `.sensoryFeedback` (iOS 17+)
 
-Make gestures feel physical with haptics — one line of code:
+Make gestures feel physical with haptics one line of code:
 
 ```swift
 @State private var isLiked = false
@@ -392,7 +391,7 @@ ScrollView {
 
 ---
 
-## 🎯 Quick Reference — Gesture Cheat Sheet
+## 🎯 Quick Reference Gesture Cheat Sheet
 
 ```
 TapGesture()                    → Single tap
@@ -424,17 +423,17 @@ Found a bug? Have a better example? Want to add a gesture type we missed?
 3. Make your changes
 4. Open a PR with a clear description
 
-All skill levels welcome — this is a learner-first repo. 🙌
+All skill levels welcome this is a learner first repo. 🙌
 
 ---
 
 ## 👋 About the Author
 
-Hey, I'm **Preet Pambhar** — an iOS developer who believes the best way to grow is to learn in public, share what you know, and build alongside a community.
+Hey, I'm **Preet Pambhar**  an iOS developer who believes the best way to grow is to learn in public, share what you know, and build alongside a community.
 
-This series is part of my contribution to **iOS Labs**, where the goal is simple: make SwiftUI concepts approachable, practical, and genuinely useful — whether you're just starting out or already shipping apps.
+This series is part of my contribution to **iOS Labs**, where the goal is simple: make SwiftUI concepts approachable, practical, and genuinely useful whether you're just starting out or already shipping apps.
 
-If this helped you understand gestures even a little better, that's a win. And if you have feedback, improvements, or just want to connect — I'd love to hear from you.
+If this helped you understand gestures even a little better, that's a win. And if you have feedback, improvements, or just want to connect I'd love to hear from you.
 
 Let's keep building. 🚀
 
