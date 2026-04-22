@@ -1,7 +1,7 @@
 # Part 1: Tap Gestures in SwiftUI
 ### iOS Labs Contribution Series SwiftUI Interactions
 
-> **Series:** SwiftUI Interactions from Zero to Real-World  
+> **Series:** SwiftUI Interactions from Zero to Real World  
 > **Part:** 1 of 3  
 > **iOS Target:** iOS 17+ 
 
@@ -17,7 +17,7 @@ You double tapped a photo to like it on Instagram. You long pressed a message to
 
 In SwiftUI, gestures are your primary tool for making apps feel *alive and responsive*. They turn static UI into something users can interact with naturally — because they mirror how people interact with the physical world.
 
-Before we build a TikTok-style feed (Part 2) or add animations (Part 3), we need to understand the foundation: **how SwiftUI handles gestures, and how to use them confidently.**
+Before we build a TikTok style feed (Part 2) or add animations (Part 3), we need to understand the foundation: **how SwiftUI handles gestures, and how to use them confidently.**
 
 ---
 
@@ -224,7 +224,7 @@ struct DraggableCardView: View {
 | `value.startLocation` | Where the drag began |
 | `value.velocity` | Speed of the drag (iOS 17+) |
 
-> 💡 **iOS 17 Bonus:** `value.velocity` lets you detect a flick vs. a slow drag - great for swipe-to-dismiss animations that feel natural.
+> 💡 **iOS 17 Bonus:** `value.velocity` lets you detect a flick vs. a slow drag great for swipe-to-dismiss animations that feel natural.
 
 ---
 
