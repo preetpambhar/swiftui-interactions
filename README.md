@@ -15,7 +15,7 @@ You double tapped a photo to like it on Instagram. You long pressed a message to
 
 **Every single one of those is a gesture.**
 
-In SwiftUI, gestures are your primary tool for making apps feel *alive and responsive*. They turn static UI into something users can interact with naturally — because they mirror how people interact with the physical world.
+In SwiftUI, gestures are your primary tool for making apps feel *alive and responsive*. They turn static UI into something users can interact with naturally because they mirror how people interact with the physical world.
 
 Before we build a TikTok style feed (Part 2) or add animations (Part 3), we need to understand the foundation: **how SwiftUI handles gestures, and how to use them confidently.**
 
@@ -23,7 +23,7 @@ Before we build a TikTok style feed (Part 2) or add animations (Part 3), we need
 
 ## 📦 What's Covered in This Part
 
-| # | Gesture | Real-World Analogy |
+| # | Gesture | Real World Analogy |
 |---|---------|-------------------|
 | 1 | `TapGesture` | Pressing a doorbell |
 | 2 | `LongPressGesture` | Holding a button in an elevator |
@@ -36,7 +36,7 @@ Before we build a TikTok style feed (Part 2) or add animations (Part 3), we need
 
 ## 🧱 The Basics — How Gestures Work in SwiftUI
 
-SwiftUI attaches gestures to views using the `.gesture()` modifier. Think of it like putting a sticker sensor on top of a view — whenever the user interacts with that area, the sensor fires.
+SwiftUI attaches gestures to views using the `.gesture()` modifier. Think of it like putting a sticker sensor on top of a view whenever the user interacts with that area, the sensor fires.
 
 ```swift
 Text("Tap me!")
